@@ -7,6 +7,16 @@ public class DayFiveMain {
     public static void main(String[] args) {
 //        System.out.println("GOD is good!");
         int n = scanner.nextInt();
+
+
+        for (int i=1; i<=10; i++){
+            int result = n *i;
+            System.out.println(n+" x "+i+" = "+result);
+        }
+
+
+
+
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
         scanner.close();
@@ -18,7 +28,7 @@ public class DayFiveMain {
 // In this challenge, we're going to use loops to help us do some simple math. Check out the Tutorial tab to learn more.
 // >TASK:
 // Given an integer, n, print its first 10 multiples. Each multiple n * i (where 1<=i<=10) should be printed on a new line in the
-// form: n x i = result.
+// form: n * i = result.
 // >Input Format
 //    A single integer, n.
 // Constraints
