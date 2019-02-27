@@ -1,20 +1,46 @@
 package com.hackerrank.challenges.dayEight;
 
+import javax.crypto.Mac;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class DictionariesMapsMain {
     public static void main(String[] args) {
-//        System.out.println("GOD is so good");
         Scanner in = new Scanner(System.in);
+//        System.out.println("GOD is so good");
+
+//example
+//        int a = in.nextInt();
+//        Map<String, Integer> map = new HashMap<>();
+//        map.put("One", 1);
+//        map.containsKey(a);
+
+        Map<String, Integer> phoneBook = new HashMap<>();
+//
+//        phoneBook.put("Sam", 99912222);
+//        phoneBook.put("tom", 11122222);
+//        phoneBook.put("harry", 12299933);
+
         int n = in.nextInt();
         for(int i = 0; i < n; i++){
             String name = in.next();
             int phone = in.nextInt();
             // Write code here
+            phoneBook.put(name, phone);
+//            Map<String, Integer> phoneBook = new HashMap<>();
+//            phoneBook.put("sam", 99912222);
+//            phoneBook.put("tom", 11122222);
+//            phoneBook.put("harry", 12299933);
         }
         while(in.hasNext()){
             String s = in.next();
             // Write code here
+            if (phoneBook.get(s) == null) {
+                System.out.println("Not Found");
+            } else {
+                System.out.println(s+" "+phoneBook.get(s));
+            }
         }
         in.close();
     }
