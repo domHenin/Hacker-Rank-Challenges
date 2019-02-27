@@ -11,9 +11,11 @@ import java.util.regex.*;
 public class DayTwoMain {
 //  Complete the solve function below
     static void solve(double meal_cost, int tip_percent, int tax_percent){
-        double mealCost=12;
-        int tipPercent=20;
-        int taxPercent=8;
+        float tip = (float) ((meal_cost*tip_percent)/100.0);
+        float tax = (float) ((meal_cost*tax_percent)/100.0);
+        float cost = (float) (meal_cost + tip + tax);
+        int totalCost = Math.round(cost);
+        System.out.printf("The total meal cost is %d dollars.",totalCost);
 
     }
 
@@ -25,13 +27,32 @@ public class DayTwoMain {
 
         int tip_percent = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
         int tax_percent = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+
+
 
         solve(meal_cost, tip_percent, tax_percent);
         scanner.close();
     }
 }
+//
+////Calculating Tip %
+//tip = meal_cost * (tip_percent/100.0);
+//
+//
+////Calculating Tax %
+//        tax = meal_cost * (tax_percent/100.0);
+//
+////Calculating Total Cost $
+//        totalCost = meal_cost + tip + tax;
+//        printf("The total meal cost is %.0f dollars.",round(totalCost));
+
+//cout<<"The total meal cost is "<< round(totalCost) <<" dollars."<<endl;
+//This  line of code didnt pass 'Testcase 3'
+
 
 //TODO
 // >Objective:
