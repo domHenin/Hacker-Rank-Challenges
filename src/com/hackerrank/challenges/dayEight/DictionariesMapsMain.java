@@ -1,6 +1,5 @@
 package com.hackerrank.challenges.dayEight;
 
-import javax.crypto.Mac;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -37,9 +36,9 @@ public class DictionariesMapsMain {
             String s = in.next();
             // Write code here
             if (phoneBook.get(s) == null) {
-                System.out.println("Not Found");
+                System.out.println("Not found");
             } else {
-                System.out.println(s+" "+phoneBook.get(s));
+                System.out.println(s+"="+phoneBook.get(s));
             }
         }
         in.close();
