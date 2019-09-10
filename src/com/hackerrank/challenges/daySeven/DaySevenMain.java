@@ -15,17 +15,7 @@ public class DaySevenMain {
 
 
 
-        String[] arrItems = scanner.nextLine().split(" ");
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
-        for (int i = 0; i < n; i++) {
-            int arrItem = Integer.parseInt(arrItems[i]);
-            arr[i] = arrItem;
-            System.out.println(arr[i]);
-        }
-
-        scanner.close();
-    }
+        scanner.close();    }
 }
 
 //TODO
